@@ -303,6 +303,21 @@
   .cta-final p{ font-size:16px; margin-bottom:34px; opacity:.85; max-width:520px; margin-left:auto; margin-right:auto; }
   .cta-final .btn-dark{ background:#14181A; }
 
+  /* ---------- CONTACT FORM ---------- */
+  .contact-form{
+    background:var(--paper); border:1px solid var(--line); border-radius:8px;
+    padding:36px 32px; display:flex; flex-direction:column; gap:18px;
+  }
+  .form-row{ display:flex; flex-direction:column; gap:6px; text-align:left; }
+  .form-row label{ font-size:12.5px; font-weight:600; color:var(--ink-soft); letter-spacing:.02em; }
+  .form-row input, .form-row textarea{
+    font-family:var(--font-body); font-size:15px; padding:12px 14px;
+    border:1px solid var(--line); border-radius:4px; background:#FAFAF8; color:var(--ink);
+    resize:vertical; transition:border-color .2s;
+  }
+  .form-row input:focus, .form-row textarea:focus{ outline:none; border-color:var(--accent); }
+  .form-note{ font-size:12.5px; color:var(--ink-soft); text-align:center; margin-top:-6px; }
+
   /* ---------- FOOTER ---------- */
   footer{ background:var(--bg-dark); color:#8A9092; padding:48px 0 30px; }
   .footer-grid{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:24px; margin-bottom:36px; }
@@ -310,7 +325,7 @@
   .footer-links{ display:flex; gap:28px; flex-wrap:wrap; }
   .footer-links a{ font-size:14px; color:#C9CDCE; }
   .footer-links a:hover{ color:#F6F4EF; }
-  .footer-bottof{ border-top:1px solid var(--line-dark); padding-top:20px; font-size:12.5px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+  .footer-bottom{ border-top:1px solid var(--line-dark); padding-top:20px; font-size:12.5px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
 
   ::selection{ background:var(--accent); color:#14181A; }
   :focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
@@ -540,6 +555,35 @@
     <h2>¿Hablamos 20 minutos?</h2>
     <p>Te muestro, con tus propios números, en qué se está perdiendo tu prospección hoy — sin costo y sin compromiso.</p>
     <a href="https://wa.me/573228553497?text=Hola%20Ana%2C%20quiero%20agendar%20un%20diagn%C3%B3stico%20comercial%20gratuito" class="btn btn-dark" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+  </div>
+</section>
+
+<section id="formulario" style="padding-top:80px;">
+  <div class="wrap" style="max-width:640px;">
+    <div class="section-head reveal" style="text-align:center; margin:0 auto 40px;">
+      <div class="eyebrow" style="justify-content:center;">Contacto</div>
+      <h2>O escríbeme directamente</h2>
+      <p>Cuéntame brevemente tu situación y te respondo en menos de 24 horas.</p>
+    </div>
+    <form action="https://formsubmit.co/amsa.negociadorinternacional@gmail.com" method="POST" class="contact-form reveal">
+      <input type="hidden" name="_subject" value="Nuevo contacto desde asierraconsultor.com">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="form-row">
+        <label for="f-nombre">Nombre</label>
+        <input type="text" id="f-nombre" name="Nombre" required>
+      </div>
+      <div class="form-row">
+        <label for="f-correo">Correo</label>
+        <input type="email" id="f-correo" name="Correo" required>
+      </div>
+      <div class="form-row">
+        <label for="f-mensaje">¿Qué necesitas?</label>
+        <textarea id="f-mensaje" name="Mensaje" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" style="justify-content:center;">Enviar mensaje</button>
+      <p class="form-note">Tu mensaje llega directo a mi correo — sin intermediarios.</p>
+    </form>
   </div>
 </section>
 
